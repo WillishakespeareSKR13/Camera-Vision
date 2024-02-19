@@ -1,18 +1,23 @@
 import { Dimensions } from "react-native";
 
-const size1 = "0.0625rem";
-const size2 = "0.25rem";
-const size3 = "0.5rem";
-const size4 = "0.75rem";
-const size5 = "0.875rem";
-const size6 = "1rem";
-const size7 = "1.25rem";
-const size8 = "1.5rem";
-const size9 = "2rem";
+const width = Dimensions.get("window").width;
+const height = Dimensions.get("window").height;
+
+const remToNumber = (rem: number) => (rem * 16) / width;
+
+const size1 = remToNumber(0.0625);
+const size2 = remToNumber(0.25);
+const size3 = remToNumber(0.5);
+const size4 = remToNumber(0.75);
+const size5 = remToNumber(0.875);
+const size6 = remToNumber(1);
+const size7 = remToNumber(1.25);
+const size8 = remToNumber(1.5);
+const size9 = remToNumber(2);
 
 export const sizes = {
-  vw: Dimensions.get("window").width,
-  vh: Dimensions.get("window").height,
+  vw: width,
+  vh: height,
 
   xxxs: size1,
   xxs: size2,

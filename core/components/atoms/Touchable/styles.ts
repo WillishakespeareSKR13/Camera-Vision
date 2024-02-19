@@ -1,5 +1,6 @@
 import { pulsar } from "@core/utils/pulsar";
 import { TouchableProps } from "./types";
+import { tokens } from "@core/tokens";
 
 export const Styles = pulsar.props<TouchableProps>((props) => {
   const { variant = "primary", disabled } = props;
@@ -17,6 +18,7 @@ const css = pulsar.create({
   base: {
     width: 100,
     height: 100,
+    padding: tokens.sizes.md,
   },
   disabled: {
     opacity: 0.5,

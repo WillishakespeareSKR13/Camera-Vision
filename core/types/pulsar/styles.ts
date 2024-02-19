@@ -12,9 +12,8 @@ export type StyleSheet<T> = {
   [P in keyof T]: Styles;
 };
 
+type ThemeProps = { theme?: Theme };
+
 export type NovaStyleSheet<T> = {
-  [P in keyof T]:
-    | ((props?: unknown) => Styles)
-    | ((props?: unknown) => (theme: Theme) => Styles)
-    | Styles;
+  [P in keyof T]: ((args: ThemeProps & T[P]) => Styles) | Styles;
 };

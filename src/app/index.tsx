@@ -5,9 +5,6 @@ const Page = () => {
   return (
     <View style={styles.container}>
       <Touchable text="Press me" />
-      {/* <PermissionCamera>
-        <NativeCamera />
-      </PermissionCamera> */}
     </View>
   );
 };
